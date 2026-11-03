@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Styled multi-page project by Shubhanshu Kushwaha.">
+  <title>Shubhanshu's Styled Multi-Page Project</title>
+  <style>
+    :root {
+      --primary: #1f3a93;
+      --accent: #f4a261;
+      --bg: #f8f9fc;
+      --text: #222;
+      --radius: 8px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    header {
+      background: var(--primary);
+      color: #fff;
+      padding: 1rem 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 1.4rem;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin-left: 1rem;
+      padding-bottom: 2px;
+    }
+
+    nav a:hover {
+      border-bottom: 2px solid var(--accent);
+    }
+
+    main {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 1.5rem;
+    }
+
+    .page {
+      display: none;
+      background: #fff;
+      padding: 1.5rem;
+      border-radius: var(--radius);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, .08);
+    }
+
+    .page:target,
+    body:not(:has(.page:target)) #home {
+      display: block;
+    }
+
+    h2 {
+      color: var(--primary);
+      margin-top: 0;
+    }
+
+    label {
+      display: block;
+      margin-bottom: .75rem;
+      font-weight: 600;
+    }
+
+    input,
+    select,
+    textarea {
+      display: block;
+      width: 100%;
+      padding: .5rem;
+      margin-top: .25rem;
+      border: 1px solid #bbb;
+      border-radius: 4px;
+      font: inherit;
+    }
+
+    button {
+      background: var(--accent);
+      border: 0;
+      padding: .6rem 1.4rem;
+      border-radius: var(--radius);
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    button:hover {
+      filter: brightness(.92);
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    th,
+    td {
+      border: 1px solid #ddd;
+      padding: .5rem;
+    }
+
+    th {
+      background: #eef1fb;
+      text-align: left;
+    }
+
+    .note {
+      background: #fff8ec;
+      border-left: 5px solid var(--accent);
+      padding: 1rem;
+      margin-top: 1.5rem;
+      border-radius: 4px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      color: #666;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Shubhanshu's Site</h1>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#register">Register</a>
+      <a href="#contact">Contact</a>
+      <a href="#design">Design Note</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home" class="page">
+      <h2>Home</h2>
+      <p>Welcome to my styled multi-page project. My name is Shubhanshu Kushwaha, and I am a BCA student.</p>
+      <p>This project demonstrates a multi-page website using HTML and CSS.</p>
+    </section>
+
+    <section id="about" class="page">
+      <h2>About Me</h2>
+      <table>
+        <tr>
+          <th>Name</th>
+          <td>Shubhanshu Kushwaha</td>
+        </tr>
+        <tr>
+          <th>Student ID</th>
+          <td>BCAI2026081</td>
+        </tr>
+        <tr>
+          <th>Course</th>
+          <td>BCA</td>
+        </tr>
+        <tr>
+          <th>Mobile</th>
+          <td>8887955490</td>
+        </tr>
+        <tr>
+          <th>Interests</th>
+          <td>Web Development, Music, Cricket</td>
+        </tr>
+      </table>
+    </section>
+
+    <section id="register" class="page">
+      <h2>Registration</h2>
+      <form action="#">
+        <label>
+          Name
+          <input type="text" value="Shubhanshu Kushwaha" required>
+        </label>
+
+        <label>
+          Student ID
+          <input type="text" value="BCAI2026081" required>
+        </label>
+
+        <label>
+          Mobile
+          <input type="tel" value="8887955490" required>
+        </label>
+
+        <label>
+          Email
+          <input type="email" required>
+        </label>
+
+        <label>
+          Course
+          <select>
+            <option selected>BCA</option>
+            <option>B.Tech</option>
+          </select>
+        </label>
+
+        <button type="submit">Register</button>
+      </form>
+    </section>
+
+    <section id="contact" class="page">
+      <h2>Contact</h2>
+      <p><strong>Name:</strong> Shubhanshu Kushwaha</p>
+      <p><strong>Mobile:</strong> 8887955490</p>
+
+      <form action="#">
+        <label>
+          Name
+          <input type="text" value="Shubhanshu Kushwaha">
+        </label>
+
+        <label>
+          Message
+          <textarea rows="4"></textarea>
+        </label>
+
+        <button type="submit">Send</button>
+      </form>
+    </section>
+
+    <section id="design" class="page">
+      <h2>Design Choices</h2>
+      <div class="note">
+        <p><strong>Colour:</strong> Deep blue represents trust and professionalism, with an orange accent for buttons.</p>
+        <p><strong>Typography:</strong> System font stack for fast loading and 1.6 line-height for readable paragraphs.</p>
+        <p><strong>Layout:</strong> Content is capped at 800px. White cards on a light-grey background create depth.</p>
+        <p><strong>Maintainability:</strong> Colours are stored in CSS variables so the theme can be changed easily.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <small>&copy; 2026 Shubhanshu Kushwaha | BCA</small>
+  </footer>
+</body>
+
+</html>
