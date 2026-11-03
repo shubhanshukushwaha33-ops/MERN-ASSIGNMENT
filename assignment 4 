@@ -1,0 +1,42 @@
+# Assignment 4 – Git Repository Setup & Commit Practice
+
+Is file me **Assignment 4** ki poori terminal command workflow, Conventional Commit standards, aur course-wide commit structure ka complete setup diya gaya hai.
+
+---
+
+## 🚀 Terminal Command History (Step-by-Step Workflow)
+
+```bash
+# ----------------------------------------------------
+# 1. Identity Setup (One-Time Configuration)
+# ----------------------------------------------------
+git config --global user.name "Your Name"
+git config --global user.email "you@example.com"
+
+# ----------------------------------------------------
+# 2. Repository Initialization
+# ----------------------------------------------------
+mkdir html-css-assignments
+cd html-css-assignments
+git init
+git branch -M main
+
+# ----------------------------------------------------
+# 3. Commit 1: Project Documentation Setup
+# ----------------------------------------------------
+echo "# HTML & CSS Assignments" > README.md
+git add README.md
+git commit -m "docs: add README with project overview"
+
+# ----------------------------------------------------
+# 4. Commit 2: Setup & Git Assignments Integration
+# ----------------------------------------------------
+cp -r /path/to/this/folder/assignments .
+git add 01-*.md 02-*.md 03-*.md 04-*.md 05-*.md
+git commit -m "docs: add setup & git assignments (1-5)"
+
+# ----------------------------------------------------
+# 5. Commit 3: HTML Basics Integration
+# ----------------------------------------------------
+git add 06-*.html 07-*.html 08-*.html 09-*.html 10-*.html
+git commit -m "feat:
