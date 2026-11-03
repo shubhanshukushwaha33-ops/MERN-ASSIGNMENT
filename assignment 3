@@ -1,0 +1,70 @@
+# Assignment 3 – Terminal Navigation Practice Sheet
+
+A comprehensive cheat sheet and step-by-step solution for elementary terminal navigation commands across Unix-like systems (macOS / Linux / Git Bash) and Windows PowerShell.
+
+---
+
+## 💻 Command Reference Table
+
+| # | Task | Command (macOS / Linux / Git Bash) | PowerShell (Windows) |
+|---|---|---|---|
+| **1** | Show current folder | `pwd` | `pwd` |
+| **2** | List files | `ls` | `ls` |
+| **3** | List with details + hidden files | `ls -la` | `ls -Force` |
+| **4** | Create a folder | `mkdir practice` | `mkdir practice` |
+| **5** | Enter the folder | `cd practice` | `cd practice` |
+| **6** | Create an empty file | `touch index.html` | `ni index.html` |
+| **7** | Create nested folders | `mkdir -p css/images` | `mkdir css/images` |
+| **8** | Go up one level | `cd ..` | `cd ..` |
+| **9** | Go to home directory | `cd ~` | `cd ~` |
+| **10** | Copy a file | `cp index.html backup.html` | `cp index.html backup.html` |
+| **11** | Rename / move a file | `mv backup.html old.html` | `mv backup.html old.html` |
+| **12** | Delete a file | `rm old.html` | `rm old.html` |
+| **13** | Delete a folder | `rm -r css` | `rm -r css` |
+| **14** | Print file contents | `cat index.html` | `cat index.html` |
+| **15** | Clear the screen | `clear` | `cls` |
+| **16** | Open folder in VS Code | `code .` | `code .` |
+
+---
+
+## 🏋️ Practice Exercise
+
+### **Problem Statement**
+Starting from your home directory, execute the following steps and record every command used:
+1. Create `website/` containing `index.html`, `css/style.css`, and `images/`.
+2. Navigate into `css/`, then return to `website/` using a single command (`cd ..`).
+3. List all files recursively (`ls -R`).
+4. Rename `index.html` to `home.html`, then rename it back to `index.html`.
+5. Open the folder in VS Code.
+
+---
+
+## 📝 Step-by-Step Solution
+
+```bash
+# 1. Navigate to home directory
+cd ~
+
+# 2. Create the directory structure (website folder with subdirectories)
+mkdir -p website/css website/images
+
+# 3. Create the required files
+touch website/index.html website/css/style.css
+
+# 4. Enter the css directory
+cd website/css
+
+# 5. Return back to the website directory (single command)
+cd ..
+
+# 6. List everything inside the directory recursively
+ls -R
+
+# 7. Rename index.html to home.html
+mv index.html home.html
+
+# 8. Rename home.html back to index.html
+mv home.html index.html
+
+# 9. Open the current folder in Visual Studio Code
+code .
